@@ -1,0 +1,5 @@
+### Init admin
+GET localhost:8080/init/admin
+
+### Init moderator
+GET localhost:8080/init/moderator

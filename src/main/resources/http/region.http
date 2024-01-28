@@ -1,0 +1,48 @@
+### create article type
+POST http://localhost:8080/region
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYxMjE4NTUsImlkIjoyLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYyMDgyNTUsImlzcyI6Ikt1blV6VGVzdCJ9.j0fE0SE8WEC1OQ-5crLzUjP5agosZ49xLRrwUcyZZF0R2fY_HdcZt3AuSW-yaPYF7vWOFLYTOwyk3C9RiK2cXw
+
+{
+  "nameUz": "Xorazm uz1",
+  "nameRu": "Xorazm ru1",
+  "nameEn": "Xorazm en1",
+  "orderNumber": 3
+}
+
+### get by id
+GET http://localhost:8081/region/1
+
+###
+PUT http://localhost:8081/region/1
+Content-Type: application/json
+
+{
+  "nameUz": "Toshkent",
+  "nameRu": "Ташкент",
+  "nameEn": "Tashkent",
+  "orderNumber": 1,
+  "visible": true
+}
+
+
+### delete by id
+DELETE http://localhost:8081/region/1
+
+### pagination
+GET http://localhost:8081/region/pagination?page=1&size=2
+
+### get by lang
+GET http://localhost:8080/region/byLang?lang=en
+
+
+
+### Test
+POST https://api.dasturjon.uz/api/v1/proverb
+Content-Type: application/json
+profileRole: USER
+
+{
+  "content": "Teststsetsetstwtrsdsdsr",
+  "author": "Test"
+}
